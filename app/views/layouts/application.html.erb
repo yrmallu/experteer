@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Experteer</title>
+    <title>ExperteerCodingChallengeMeetupAsync</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "i18n" %>
+
   </head>
 
-  <body>
+  <div class="wrapper">
+    <div id="flash">
+      <%= render "layouts/flash_messages" %>
+    </div>
+
     <%= yield %>
-  </body>
+  </div>
 </html>
